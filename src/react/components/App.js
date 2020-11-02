@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import { Header } from "./Header/header";
-import { Footer } from "./Footer/index.js";
-import { Main } from "./Main/main";
+import { Header } from "./Header/";
+import { Footer } from "./Footer/";
+import { Main } from "./Main/";
 
 function App() {
   return (

@@ -21,6 +21,12 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: "url-loader",
+        },
+      },
 
       {
         test: /\.s(a|c)ss$/,
