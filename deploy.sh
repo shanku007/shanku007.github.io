@@ -1,19 +1,12 @@
 #!/bin/bash
-# Credit to https://brianchildress.co/named-parameters-in-bash/
-message=${m:-Publcishing website}
+PACKAGE_VERSION=$(cat package.json \
+  | grep version \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g' \
+  | tr -d '[[:space:]]')
 
-while [ $# -gt 0 ]; do
-
-   if [[ $1 == *"--"* ]]; then
-        param="${1/--/}"
-        declare $param="$2"
-        # echo $1 $2 // Optional to see the parameter:value result
-   fi
-
-  shift
-done
-
-echo "Message"
+message="Publishing website version ${PACKAGE_VERSION}"
 echo $message
 
 cd dist
