@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Portfolio website of Shankar Jha",
   "main": "index.js",
   "scripts": {
