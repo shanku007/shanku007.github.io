@@ -7,8 +7,8 @@
     "start": "webpack serve --mode development --env development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rimraf dist && npm version patch",
-    "build": "webpack --mode production",
-    "postbuild": "./deploy.sh dist '`Publishing website version ${process.env.npm_package_version}`'",
+    "build": "webpack --mode production && ",
+    "deploy": "'console.log(`${process.env.npm_package_version} Hello` && ./deploy.sh dist '`Publishing website version ${process.env.npm_package_version}`'",
     "check-env": "node -e 'console.log(`${process.env.npm_package_version} Hello` )'"
   },
   "repository": {
