@@ -4,5 +4,6 @@ then
   echo "Which folder do you want to deploy to GitHub Pages?"
   exit 1
 fi
-git add dist && git commit -m "dist subtree commit"
+echo $2
+git add dist && git commit -m $2
 git subtree push --prefix $1 origin gh-pages

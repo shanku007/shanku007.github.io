@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "description": "Portfolio website of Shankar Jha",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rimraf dist && npm version patch",
     "build": "webpack --mode production",
-    "postbuild": "./deploy.sh dist '${process.env.npm_package_version}'",
+    "postbuild": "./deploy.sh dist '`Publishing website version ${process.env.npm_package_version}`'",
     "check-env": "node -e 'console.log(`${process.env.npm_package_version} Hello` )'"
   },
   "repository": {
