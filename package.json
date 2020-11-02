@@ -6,9 +6,10 @@
   "scripts": {
     "start": "webpack serve --mode development --env development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rimraf dist && npm version patch",
     "build": "webpack --mode production",
-    "postbuild": "./deploy.sh --d dist --m '`Publishing website version ${process.env.npm_package_version}`'",
+    "predeploy": "rimraf dist && npm version patch",
+    "deploy": "webpack --mode production",
+    "postdeploy": "./deploy.sh --d dist --m 'console.log(`Publishing website version ${process.env.npm_package_version}`)'",
     "check-env": "node -e 'console.log(`${process.env.npm_package_version} Hello` )'"
   },
   "repository": {

@@ -10,7 +10,7 @@ export class Home extends Component {
     this.erase = this.erase.bind(this);
     this.state = {
       caption: "",
-      text: "Hey, I am Shankar Jha. I am a Software Developer.",
+      text: "Hey, I am Shankar Jha. I am a Automation enthusiast",
       captionLength: 0,
     };
   }

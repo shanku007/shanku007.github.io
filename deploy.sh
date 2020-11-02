@@ -19,4 +19,4 @@ echo $dist_folder
 echo $message
 
 git add $dist_folder && git commit -m "$message"
-git subtree push --prefix $1 origin gh-pages
+git subtree push --prefix $dist_folder origin website
